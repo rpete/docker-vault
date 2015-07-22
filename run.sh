@@ -10,5 +10,6 @@ sed -i "s;%%VAULT_SERVER%%;${VAULT_SERVER};" "/etc/vault.config"
 sed -i "s;%%SERVER_CRT%%;${SERVER_CRT};" "/etc/vault.config"
 sed -i "s;%%SERVER_KEY%%;${SERVER_KEY};" "/etc/vault.config"
 sed -i "s;%%CONSUL_AGENT%%;${CONSUL_AGENT};" "/etc/vault.config"
+sed -i "s;%%TOKEN%%;${TOKEN};" "/etc/vault.config"
 
 /usr/sbin/vault server -config=/etc/vault.config
