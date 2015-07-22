@@ -4,7 +4,7 @@ VAULT_SERVER=${VAULT_SERVER:-https://localhost}
 SERVER_CRT=${SERVER_CRT:-server.crt}
 SERVER_KEY=${SERVER_KEY:-server.key}
 CONSUL_AGENT=`/sbin/ip route | awk '/default/ { print $3 }'`
-
+TOKEN=${TOKEN}
 
 sed -i "s;%%VAULT_SERVER%%;${VAULT_SERVER};" "/etc/vault.config"
 sed -i "s;%%SERVER_CRT%%;${SERVER_CRT};" "/etc/vault.config"
